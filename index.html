@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-header">
+        <h1>Contact Form Builder</h1>
+        <p>Drag fields to build your form, then grab the embed code.</p>
+    </div>
+
+    <div class="builder-layout">
+        <div class="toolbox">
+            <h2>Fields</h2>
+            <button class="field-btn" draggable="true" data-type="name">
+                <span class="field-icon">👤</span> Name
+            </button>
+            <button class="field-btn" draggable="true" data-type="email">
+                <span class="field-icon">✉️</span> Email
+            </button>
+            <button class="field-btn" draggable="true" data-type="phone">
+                <span class="field-icon">📞</span> Phone
+            </button>
+            <button class="field-btn" draggable="true" data-type="message">
+                <span class="field-icon">💬</span> Message
+            </button>
+            <button class="field-btn" draggable="true" data-type="dropdown">
+                <span class="field-icon">📋</span> Dropdown
+            </button>
+            <button class="field-btn" draggable="true" data-type="checkbox">
+                <span class="field-icon">☑️</span> Checkbox
+            </button>
+
+            <div class="toolbox-section">
+                <h2>Settings</h2>
+                <label for="submitMethod">Submit method</label>
+                <select id="submitMethod">
+                    <option value="mailto">Email (mailto:)</option>
+                    <option value="webhook">Webhook URL</option>
+                </select>
+
+                <label for="submitTarget">Email or webhook URL</label>
+                <input type="text" id="submitTarget" placeholder="you@example.com">
+            </div>
+
+            <div class="generate-section">
+                <button class="btn-generate" onclick="generateCode()">Generate Embed Code</button>
+            </div>
+
+            <div class="code-output" id="codeOutput" style="display:none">
+                <textarea id="embedCode" readonly></textarea>
+                <button class="btn-copy" onclick="copyCode()">Copy Code</button>
+            </div>
+        </div>
+
+        <div class="preview-panel">
+            <h2>Live Preview</h2>
+            <div class="form-preview" id="formPreview">
+                <div class="drop-hint" id="dropHint">Drag fields here to start building your form</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="contact-form.js"></script>
+</body>
+</html>
