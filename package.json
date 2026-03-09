@@ -1,0 +1,25 @@
+{
+  "name": "@hand-on-web/contact-form-builder",
+  "version": "1.0.0",
+  "description": "Drag-and-drop contact form builder with honeypot spam protection. No backend needed.",
+  "main": "contact-form.js",
+  "homepage": "https://www.handonweb.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hand-On-Web-Ltd/contact-form-builder.git"
+  },
+  "keywords": [
+    "contact-form",
+    "form-builder",
+    "spam-protection",
+    "no-backend",
+    "embed"
+  ],
+  "author": "Hand On Web Ltd <outreach@handonweb.com>",
+  "license": "MIT",
+  "files": [
+    "contact-form.js",
+    "style.css",
+    "index.html"
+  ]
+}
